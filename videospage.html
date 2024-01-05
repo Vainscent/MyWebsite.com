@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('luxmundi.jpg');
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #backButton {
+            background-color: #17f702;
+            color: #0f0f0f;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #videoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .video-wrapper {
+            width: 80%;
+            overflow-x: auto;
+            border: 2px solid #98fb9800; /* Light Green border color */
+            margin-bottom: 20px; /* Bottom margin between videos */
+            padding: 10px; /* Padding for a cleaner look */
+            box-sizing: border-box; /* Include padding in total width */
+        }
+
+        .video {
+            width: 100%;
+            background: transparent; /* Set background to transparent */
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ffffff;
+            border: 2px solid #17f702; /* Green border color */
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(23, 247, 2, 0.8); /* Green box shadow */
+            background-color: #0f0f0fb9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="backButton" onclick="goBack()">Back</button>
+    </header>
+
+    <div id="videoContainer">
+    
+        <div class="video-wrapper">
+            <iframe class="video" width="800" height="500" src="w.mp4" frameborder="0" allowfullscreen allowtransparency="true"></iframe>
+            <div class="caption">"Explore Lux Mundi Cup, where competitors aren't just chasing wins – they're crafting
+                 moments of grace and brilliance. From fashion to design, tech to more, 
+                it's a celebration of unique talents blending into an extraordinary experience beyond mere victory."</div>
+        </div>
+      
+    </div>
+
+    <script>
+        function goBack() {
+            // Navigate back to home.html (replace with the actual URL)
+            window.location.href = 'home.html';
+        }
+    </script>
+
+</body>
+</html>

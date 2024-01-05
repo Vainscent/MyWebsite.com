@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Mundi Cup</title>
+
+    <style>
+        body {
+          background-image: url('luxmundi.jpg');
+            background-size: cover;
+            background-position: flex;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 20px rgba(23, 240, 4, 0.918);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #03fa18c7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #027e0ec7; /* Adjust as needed */
+        }
+
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 100px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button onclick="showPhotos()">Photos</button>
+        <button onclick="showVideos()">Videos</button>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <p>This is the Lux Mundi Cup</p>
+
+    <script>
+        function showPhotos() {
+            // Redirect to the photos page (replace 'photospage.html' with the actual page URL)
+            window.location.href = 'photospage.html';
+        }
+
+        function showVideos() {
+            // Redirect to the videos page (replace 'videospage.html' with the actual page URL)
+            window.location.href = 'videospage.html';
+        }
+
+        function logout() {
+            // Redirect to the login page (replace 'loginpage.html' with the actual page URL)
+            window.location.href = 'loginpage.html';
+        }
+    </script>
+
+</body>
+</html>

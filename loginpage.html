@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <title>Login Form</title>
+</head>
+<body>
+  <header>
+    <p ><b style="color: rgb(14, 245, 6);">My</b><span>  Website</span></p>
+    <nav>
+      <ul>
+        <li><a href="#" id="home-button">Home</a></li>
+        <li><a href="#" id="about-button">About</a></li>
+        <li><a href="#" id="contact-button">Contact</a></li>
+        <!-- Corrected the ID to "login-button" -->
+        <li><a href="#" id="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <div class="content-section">
+        
+        <h3>Hi, Everyone!</h3>
+        <h2>Welcome to <span style="color: rgb(14, 245, 6);">My Website</span></h2>
+        <p><br>
+        
+          Greetings! I am Vincent Jay G. Pati-an, a 19-year-old resident of the vibrant city of Silanga in Tangub. My educational journey has been enriched by my time at Tangub City Global College, where I pursued a program in Computer Science.
+           This academic pursuit has not only expanded my horizons but also fueled my passion for all things tech-related. 
+           It's a pleasure to share a bit of my background with you. 
+        </p>
+        </p>
+        <img src="profile.jpg" alt="Your Image">
+        
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="toggleForms()" style="margin-right: 10px;  margin-bottom: 100px; font-size: 40px;">Register now</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section id="about" style="display: none;">
+      <div class="content-section">
+        <h2 style="color: rgb(14, 245, 6);">About</h2>
+        <p>
+         
+          
+          This HTML webpage features a header with navigation links, sections for Home, About, 
+          Contact, and Login, and a footer with a copyright notice. It emphasizes Lux Mundi Cup 
+          events through impactful photos and videos. This multimedia approach is tailored to
+           immerse visitors in the dynamic events of the Lux Mundi Cup. The Contact section provides
+            convenient links to social media and contact details, while the Login section features a
+             stylish authentication form. The design strategically accentuates Lux Mundi Cup events,
+              creating a visually compelling and user-centric experience centered around these noteworthy occasions.
+        </p>
+      </div>
+    </section>
+    <section id="contact" style="display: none;">
+      <div class="content-section">
+        <h2 style="color: rgb(14, 245, 6);">Contact</h2>
+        <ul class="contact-list">
+          <p>
+            For any concerns, please feel free to contact us at your convenience.</p>
+          <li>
+            <a href="https://www.facebook.com/vincentjay.patian143" class="contact-link">
+              <img src="facebook.png" alt="Facebook">
+              <button class="contact-button">Vincent Jay Pati-an</button>
+            </a>
+          </li>
+          <li>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="contact-link">
+              <img src="gmail.png" alt="Gmail">
+              <button class="contact-button">vincentjaypatian88@gmail.com</button>
+            </a>
+          </li>
+          <li>
+            <a href="tel:09187525236" class="contact-link">
+              <img src="phone.png" alt="Phone">
+              <button class="contact-button">09187525236</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="login" style="display: none;">
+      <div class="content-section">
+        <h2 style="color: rgb(14, 245, 6); justify-content: center;">Login here</h2>
+        <title>Login and Register</title>
+        <style>
+        title{ 
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-image: url('background.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+      }
+
+      .container {
+          background-color: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          padding: 20px;
+          width: 300px;
+          text-align: center;
+          box-shadow: 0 0 30px rgba(13, 226, 24, 0.8);
+      }
+
+      .container h2 {
+          color: #333;
+      }
+
+      form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      input {
+          width: 100%;
+          padding: 10px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+      }
+
+      button {
+          background-color: #4caf50;
+          color: #fff;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s, transform 0.2s ease-in-out;
+          width: 100%;
+      }
+
+      button:hover {
+          background-color: #45a049;
+          transform: scale(1.05);
+      }
+
+      .register-link {
+          margin-top: 16px;
+          color: #333;
+      }
+
+      .register-link a {
+          color: #4caf50;
+          text-decoration: none;
+      }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="login(event)">
+                <input type="email" name="email" placeholder="Email" required>
+                <br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <p class="register-link">Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+        </div>
+    
+        <div class="container" id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form id="registerForm" onsubmit="register(event)">
+                <input type="email" name="email" placeholder="Email" required>
+                <br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+            <p class="register-link">Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+        </div>
+    
+        <script>
+            // Simulate a list of registered accounts
+            var registeredAccounts = [
+                { email: 'test@example.com', password: 'password' }
+            ];
+    
+            function toggleForms() {
+                var loginForm = document.getElementById('login-form');
+                var registerForm = document.getElementById('register-form');
+    
+                loginForm.style.display = (loginForm.style.display === 'none') ? 'block' : 'none';
+                registerForm.style.display = (registerForm.style.display === 'none') ? 'block' : 'none';
+            }
+    
+            function login(event) {
+                event.preventDefault();
+    
+                // Replace this with your actual login logic
+                var email = document.getElementById('loginForm').elements['email'].value;
+                var password = document.getElementById('loginForm').elements['password'].value;
+    
+                // Check if the provided email and password match any registered account
+                var matchedAccount = registeredAccounts.find(function (account) {
+                    return account.email === email && account.password === password;
+                });
+    
+                if (matchedAccount) {
+                    window.location.href = 'home.html'; // Redirect to the dashboard upon successful login
+                } else {
+                    alert('Invalid email or password. Please try again.');
+                }
+            }
+    
+            function register(event) {
+                event.preventDefault();
+                // Replace this with your actual registration logic
+                var email = document.getElementById('registerForm').elements['email'].value;
+                var password = document.getElementById('registerForm').elements['password'].value;
+    
+                // Check if the email is already registered
+                var existingAccount = registeredAccounts.find(function (account) {
+                    return account.email === email;
+                });
+    
+                if (existingAccount) {
+                    alert('Email is already registered. Please use a different email.');
+                } else {
+                    // Add the new account to the array
+                    registeredAccounts.push({ email: email, password: password });
+                    alert('Registration successful. You can now log in.');
+                    toggleForms(); // Switch to the login form after successful registration
+                }
+            }
+        </script>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Vincent Jay G. Pati-an</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script src="project1.js"></script>
+</body>
+</html>
